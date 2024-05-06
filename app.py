@@ -39,7 +39,7 @@ def upload_file():
         filename = secure_filename(file.filename)
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
-        return jsonify({'result': file_path})
+        return jsonify({'result': 'hi'})
         # features = features_extractor(file_path)
         # # You can do something with the extracted features here
         # result = model.predict(features.reshape(1,-1)).tolist()[0]  # Convert numpy array to list
