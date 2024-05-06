@@ -45,7 +45,7 @@ def upload_file():
         file.save(file_path)
         print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
         print(file_path)
-        features = features_extractor(file_path)
+        features = features_extractor(f'./uploads/{filename}')
         
         print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
         # You can do something with the extracted features here
@@ -56,5 +56,5 @@ def upload_file():
     else:
         return jsonify({'error': 'File type not allowed'})
     
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run()
