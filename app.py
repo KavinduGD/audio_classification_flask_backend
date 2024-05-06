@@ -46,9 +46,12 @@ def upload_file():
         print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
         print(file_path)
         features = features_extractor(file_path)
+        
+         print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
         # You can do something with the extracted features here
         result = model.predict(features.reshape(1,-1)).tolist()[0]  # Convert numpy array to list
         response = [{'class': cls, 'probability': prob} for cls, prob in zip(classes, result)]
+        print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
         return jsonify({'result': response})
     else:
         return jsonify({'error': 'File type not allowed'})
