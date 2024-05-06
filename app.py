@@ -48,5 +48,5 @@ def upload_file():
     else:
         return jsonify({'error': 'File type not allowed'})
     
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
