@@ -47,7 +47,7 @@ def upload_file():
         print(file_path)
         features = features_extractor(file_path)
         
-         print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
+        print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
         # You can do something with the extracted features here
         result = model.predict(features.reshape(1,-1)).tolist()[0]  # Convert numpy array to list
         response = [{'class': cls, 'probability': prob} for cls, prob in zip(classes, result)]
