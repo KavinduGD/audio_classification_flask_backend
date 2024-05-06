@@ -5,6 +5,10 @@ from werkzeug.utils import secure_filename
 import os
 import librosa
 
+# print(Flask.__version__)
+print(np.__version__)
+print(librosa.__version__)
+
 model=load_model('./audio_classification_model_cnn.h5')
 classes=['air_conditioner','car_horn','children_playing','dog_bark','drilling' , 'engine_idling', 'gun_shot','jackhammer', 'siren', 'street_music',]
 def features_extractor(file_path):
@@ -39,6 +43,7 @@ def upload_file():
         filename = secure_filename(file.filename)
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
+        print('File assssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddd')
         print(file_path)
         features = features_extractor(file_path)
         # You can do something with the extracted features here
